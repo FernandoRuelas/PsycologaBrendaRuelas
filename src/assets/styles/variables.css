@@ -1,0 +1,45 @@
+:root {
+  --primary-color: #A8DADC;
+  --secondary-color: #F1FAEE;
+  --accent-color: #E9C9C9;
+  --text-color: #2D3748;
+  --text-light: #718096;
+  --background: #FEFEFE;
+  
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 48px;
+  --spacing-xl: 72px;
+  
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-color);
+  background-color: var(--background);
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Utilidades */
+.section-padding {
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+@media (max-width: 960px) {
+  .section-padding {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+}
