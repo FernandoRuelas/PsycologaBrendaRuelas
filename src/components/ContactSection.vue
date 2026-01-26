@@ -12,7 +12,7 @@
             </p>
 
             <div class="info-items">
-              <div class="info-item">
+              <div class="info-item-cel" @click="location">
                 <div class="info-icon">
                   <v-icon color="white">mdi-map-marker</v-icon>
                 </div>
@@ -25,7 +25,7 @@
                 </div>
               </div>
 
-              <div class="info-item">
+              <div class="info-item-cel" @click="call">
                 <div class="info-icon">
                   <v-icon color="white">mdi-phone</v-icon>
                 </div>
@@ -62,7 +62,7 @@
                 variant="outlined"
                 color="primary"
                 size="large"
-                  target="_blank"
+                target="_blank"
                 href="https://www.instagram.com/psic_ruelas?igsh=MTNxeng3c3o2am5pMQ=="
               >
                 <v-icon>mdi-instagram</v-icon>
@@ -73,6 +73,9 @@
 
         <v-col cols="12" md="6">
           <div class="contact-form">
+            <v-card-title class="">Envíame un mensaje para agendar tu cita</v-card-title>
+            <v-card-subtitle class="mb-4"
+              >Si tienes dudas o quieres mas informacion enviame mensaje</v-card-subtitle>
             <v-form @submit.prevent="handleSubmit">
               <v-text-field
                 v-model="form.name"
@@ -186,42 +189,48 @@ const rules = {
   email: (value) => /.+@.+\..+/.test(value) || "Email inválido",
 };
 
+const call = () => {
+  if (this.$vuetify.breakpoint.xs) {
+    window.location.href = `tel:6221562893`;
+  }
+};
+
+const location =()=>{
+  const url= "https://www.google.com/maps?ll=32.484786,-116.942785&z=16&t=m&hl=es-419&gl=MX&mapclient=embed&cid=18024338214522585484";
+  window.open(url, "_blank");
+}
+
+
 const handleSubmit = () => {
   loading.value = true;
 
- 
-    loading.value = false;
-    alert.value = {
-      show: true,
-      type: "success",
-      message: "¡Gracias por contactarme! Te responderé pronto.",
-    };
+  loading.value = false;
+  alert.value = {
+    show: true,
+    type: "success",
+    message: "¡Gracias por contactarme! Te responderé pronto.",
+  };
 
-   
-
-    const phone = "526643412880";
-    let message = "";
-    if(form.value.service ==="Otro"){
-      message = encodeURIComponent(
+  const phone = "526643412880";
+  let message = "";
+  if (form.value.service === "Otro") {
+    message = encodeURIComponent(
       `Hola, mi nombre es ${form.value.name} y estoy interesado en poder agendar una cita,.`
     );
+  } else {
+    message = encodeURIComponent(
+      `Hola, mi nombre es ${form.value.name} y estoy interesado en el servicio de ${form.value.service}. Me gustaría agendar una cita.`
+    );
+  }
 
-    }else{
-         message = encodeURIComponent(
-          `Hola, mi nombre es ${form.value.name} y estoy interesado en el servicio de ${form.value.service}. Me gustaría agendar una cita.`
-        );
+  // Detectar si es dispositivo móvil
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-    }
+  const url = isMobile
+    ? `https://wa.me/${phone}?text=${message}`
+    : `https://web.whatsapp.com/send?phone=${phone}&text=${message}`;
 
-    // Detectar si es dispositivo móvil
-    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-    const url = isMobile
-      ? `https://wa.me/${phone}?text=${message}`
-      : `https://web.whatsapp.com/send?phone=${phone}&text=${message}`;
-
-    window.open(url, "_blank");
- 
+  window.open(url, "_blank");
 };
 </script>
 
@@ -252,6 +261,22 @@ const handleSubmit = () => {
   display: flex;
   gap: var(--spacing-sm);
   align-items: flex-start;
+}
+
+
+
+
+.info-item-cel {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: flex-start;
+}
+
+
+
+.info-item-cel:hover {
+  transform: translateY(-8px);
+  cursor: pointer;
 }
 
 .info-icon {

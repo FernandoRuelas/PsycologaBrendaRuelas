@@ -34,17 +34,33 @@
           </p>
         </div>
 
-        <v-btn
-          color="primary"
-          size="large"
-          rounded="pill"
-          variant="flat"
-          href="#contacto"
-          class="rent-btn"
-        >
-          Comunícate conmigo
-          <v-icon end>mdi-arrow-right</v-icon>
-        </v-btn>
+        <v-row justify="space-around">
+           <v-btn
+            color="secondary"
+            size="large"
+            rounded="pill"
+            variant="flat"
+            href="#instalaciones"
+            class="rent-btn"
+          >
+            Conoce las instalaciones
+            <v-icon end>mdi-arrow-right</v-icon>
+          </v-btn>
+
+          <v-btn
+            color="primary"
+            size="large"
+            rounded="pill"
+            variant="flat"
+            href="#contacto"
+            class="rent-btn"
+          >
+            Comunícate conmigo
+            <v-icon end>mdi-arrow-right</v-icon>
+          </v-btn>
+
+
+        </v-row>
       </div>
     </v-container>
   </section>

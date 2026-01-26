@@ -43,20 +43,25 @@
           </v-col>
 
           <v-col cols="12" md="4">
-            <div class="gallery-thumbs">
-              <div
-                v-for="(image, index) in images"
-                :key="index"
-                class="thumb-item"
-                :class="{ active: selectedImage === image.url }"
-                @click="selectedImage = image.url"
-              >
-                <img :src="image.url" :alt="image.alt" />
-                <div class="thumb-overlay">
-                  <v-icon color="white">mdi-eye</v-icon>
+            <v-row>
+              <v-col cols="12">
+                <div class="gallery-thumbs">
+                  <div
+                    v-for="(image, index) in images"
+                    :key="index"
+                    class="thumb-item"
+                    :class="{ active: selectedImage === image.url }"
+                    @click="selectedImage = image.url"
+                  >
+                    <img :src="image.url" :alt="image.alt" />
+                    <div class="thumb-overlay">
+                      <v-icon color="white">mdi-eye</v-icon>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+                
+              </v-col>
+            </v-row>
           </v-col>
         </v-row>
       </div>
@@ -150,21 +155,49 @@ import { ref } from "vue";
 // Reemplaza estas URLs con las rutas reales de tus imágenes
 const images = ref([
   {
-    url: "/consultorio1.png",
-    alt: "Sala de consulta principal",
+    url: "/Consultorio1.jpeg",
+    alt: "",
   },
   {
-    url: "/consultorio2.png",
-    alt: "Interior del consultorio",
+    url: "/Consultorio2.jpeg",
+    alt: "",
   },
-  {
-    url: "/entradaConsultorio.png",
-    alt: "Entrada del consultorio",
+    {
+    url: "/Consultorio3.jpeg",
+    alt: "",
   },
+ 
+    {
+    url: "/Consultorio4.jpeg",
+    alt: "",
+  },
+ 
+    {
+    url: "/Consultorio5.jpeg",
+    alt: "",
+  },
+ 
+    {
+    url: "/Consultorio6.jpeg",
+    alt: "",
+  },
+ 
+    {
+    url: "/Consultorio7.jpeg",
+    alt: "",
+  },
+   {
+    url: "/Consultorio8.jpeg",
+    alt: "",
+  },
+
+ 
+
+ 
  
 ]);
 
-const selectedImage = ref(images.value[0].url);
+const selectedImage = ref(images.value[3].url);
 const galleryDialog = ref(false);
 const carouselIndex = ref(0);
 
@@ -269,12 +302,28 @@ const openGallery = () => {
   transition: var(--transition);
 }
 
-.gallery-thumbs {
+/* .gallery-thumbs {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
   height: 500px;
+} */
+
+.gallery-thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* tres columnas */
+  gap: 12px; /* espacio entre imágenes */
+  grid-auto-rows: 160px
 }
+
+.thumb-item img {
+   width: 100%;
+  height: 100%;       /* ocupa toda la celda */
+  object-fit: cover;  /* recorta la imagen si es necesario */
+  border-radius: 8px;
+
+}
+
 
 .thumb-item {
   position: relative;

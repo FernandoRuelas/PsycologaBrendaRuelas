@@ -4,8 +4,8 @@
       <v-row>
         <v-col cols="12" md="4">
           <div class="footer-brand">
-            <h3>Dra. Brenda Ruelas</h3>
-            <p>Psicología Clínica</p>
+            <h3>Lic. Patricia Ruelas</h3>
+            <p>Psicología</p>
             <p class="footer-description">
               Comprometida con tu bienestar emocional y crecimiento personal.
             </p>
@@ -62,7 +62,7 @@
       <v-divider class="my-6"></v-divider>
 
       <div class="footer-bottom">
-        <p>&copy; 2024 Dra. Brenda Ruelas. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Lic. Patricia Ruelas. Todos los derechos reservados.</p>
          <div class="footer-created-by">
           <p>
             Sitio web creado por 

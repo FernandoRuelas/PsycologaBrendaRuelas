@@ -7,7 +7,12 @@
             <div class="about-image">
               <div class="image-placeholder">
                 <!-- <v-icon size="100" color="primary">mdi-account</v-icon> -->
-                <img src="../assets/BrendaRuelas.jpeg" alt="brenda ruelas" width="500px" height="500px">
+                <img
+                  src="../assets/BrendaRuelas.jpeg"
+                  alt="brenda ruelas"
+                  width="500px"
+                  height="500px"
+                />
               </div>
             </div>
             <div class="experience-badge">
@@ -23,10 +28,10 @@
             <h2 class="section-title">Comprometida con tu salud mental</h2>
 
             <p class="about-text">
-              Soy psicóloga clínica con más de 5 años de experiencia ayudando a
-              personas a superar desafíos emocionales y alcanzar su mejor
-              versión. Mi enfoque se centra en crear un espacio seguro donde
-              puedas expresarte libremente.
+              Soy psicóloga con más de 5 años de experiencia ayudando a personas
+              a superar desafíos emocionales y alcanzar su mejor versión. Mi
+              enfoque se centra en crear un espacio seguro donde puedas
+              expresarte libremente.
             </p>
 
             <p class="about-text">
@@ -34,76 +39,68 @@
               humanistas, adaptando cada sesión a las necesidades únicas de cada
               paciente.
             </p>
-
-            <div class="credentials">
-              <div class="credential-item">
-                <v-icon color="primary" size="24">mdi-school</v-icon>
-                <div>
-                  <h4>Maestría en Psicología Clínica</h4>
-                  <span>Universidad Nacional Autónoma</span>
+            <v-row>
+              <v-col cols="12"  md="6">
+                <div class="credential-item">
+                  <v-icon color="primary" size="24">mdi-school</v-icon>
+                  <div>
+                    <h4>Licenciatura en Psicología</h4>
+                    <span>Universidad Humanitas Campus Tijuana</span>
+                  </div>
                 </div>
-              </div>
 
-              <div class="credential-item">
-                <v-icon color="primary" size="24">mdi-certificate</v-icon>
-                <div>
-                  <h4>Curso experto en inteligencia emocional</h4>
-                  <span>AEPSIS, UDEMY</span>
+                <div class="credential-item">
+                  <v-icon color="primary" size="24">mdi-certificate</v-icon>
+                  <div>
+                    <h4>Adicciones</h4>
+                    <span>AEPSIS, UDEMY</span>
+                  </div>
                 </div>
-              </div>
-              <div class="credential-item">
-                <v-icon color="primary" size="24">mdi-certificate</v-icon>
-                <div>
-                  <h4>
-                    inteligencia emocional AEPSIS, UDEMY Curso de formación
-                    integral en Biodescodificación
-                  </h4>
-                  <span>UDEMY</span>
+
+                <div class="credential-item">
+                  <v-icon color="primary" size="24">mdi-certificate</v-icon>
+                  <div>
+                    <h4>Inteligencia emocional</h4>
+                    <span>AEPSIS, UDEMY</span>
+                  </div>
                 </div>
-              </div>
 
-
-
-               <div class="credential-item">
-                <v-icon color="primary" size="24">mdi-certificate</v-icon>
-                <div>
-                  <h4>
-                  Certificación en terapia cognitivo-conductual
-                  </h4>
-                  <span>UDEMY</span>
+                <div class="credential-item">
+                  <v-icon color="primary" size="24">mdi-certificate</v-icon>
+                  <div>
+                    <h4>Biodescodificación genetica</h4>
+                    <span>AEPSIS, UDEMY</span>
+                  </div>
                 </div>
-              </div>
+              </v-col>
+              <v-col cols="12"  md="6">
+               
 
-               <div class="credential-item">
-                <v-icon color="primary" size="24">mdi-certificate</v-icon>
-                <div>
-                  <h4>
-                 Curso en área de duelos
-                  </h4>
-                  <span>UDEMY</span>
+                <div class="credential-item">
+                  <v-icon color="primary" size="24">mdi-certificate</v-icon>
+                  <div>
+                    <h4>Área de duelos</h4>
+                    <span>AEPSIS, UDEMY</span>
+                  </div>
                 </div>
-              </div>
 
-               <div class="credential-item">
-                <v-icon color="primary" size="24">mdi-certificate</v-icon>
-                <div>
-                  <h4>
-                Curso experto en terapia de pareja
-                  </h4>
-                  <span>AEPSIS, UDEMY</span>
+                <div class="credential-item">
+                  <v-icon color="primary" size="24">mdi-certificate</v-icon>
+                  <div>
+                    <h4>Curso en experto en parejas</h4>
+                    <span>AEPSIS, UDEMY</span>
+                  </div>
                 </div>
-              </div>
 
-
-
-              <!-- <div class="credential-item">
-                <v-icon color="primary" size="24">mdi-account-group</v-icon>
-                <div>
-                  <h4>Miembro del Colegio de Psicólogos</h4>
-                  <span>Cédula Profesional: 12345678</span>
+                <div class="credential-item">
+                  <v-icon color="primary" size="24">mdi-certificate</v-icon>
+                  <div>
+                    <h4>Salud mental en niños y adolecentes</h4>
+                    <span>AEPSIS, UDEMY</span>
+                  </div>
                 </div>
-              </div> -->
-            </div>
+              </v-col>
+            </v-row>
           </div>
         </v-col>
       </v-row>

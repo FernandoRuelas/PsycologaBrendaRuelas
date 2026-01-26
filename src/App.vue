@@ -1,31 +1,30 @@
 <template>
   <v-app>
-    <v-app-bar 
-      :elevation="2" 
-      color="surface"
-      app
-      height="80"
-      class="app-bar"
-    >
+    <v-app-bar :elevation="2" color="surface" app height="80" class="app-bar">
       <v-container class="d-flex align-center justify-space-between">
-        <div class="logo">
-          <span class="logo-text">Dra. Brenda Ruelas</span>
-          <span class="logo-subtitle">Psicología Clínica</span>
+        <div class="d-flex align-center">
+          <img src="/logoPsicologa.png" alt="psicologa patricia" height="35px" width="35px">
+          <div class="logo ml-3" >
+            <span class="logo-text">Lic. Patricia Ruelas</span>
+            <span class="logo-subtitle">Psicología</span>
+          </div>
         </div>
-        
+
         <v-spacer></v-spacer>
-        
+
         <!-- Desktop Menu -->
         <div class="d-none d-md-flex align-center nav-links">
           <a href="#inicio" class="nav-link">Inicio</a>
           <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
           <a href="#servicios" class="nav-link">Servicios</a>
-          <a href="#renta-consultorios" class="nav-link">Renta de Consultorios</a>
+          <a href="#renta-consultorios" class="nav-link"
+            >Renta de Consultorios</a
+          >
           <a href="#instalaciones" class="nav-link">Instalaciones</a>
           <a href="#testimonios" class="nav-link">Testimonios</a>
-          <v-btn 
-            color="primary" 
-            variant="flat" 
+          <v-btn
+            color="primary"
+            variant="flat"
             rounded="pill"
             href="#contacto"
             class="ml-4"
@@ -35,7 +34,7 @@
         </div>
 
         <!-- Mobile Menu -->
-        <v-app-bar-nav-icon 
+        <v-app-bar-nav-icon
           class="d-md-none"
           @click="drawer = !drawer"
         ></v-app-bar-nav-icon>
@@ -49,8 +48,8 @@
       class="mobile-drawer"
     >
       <v-list nav>
-        <v-list-item 
-          v-for="item in menuItems" 
+        <v-list-item
+          v-for="item in menuItems"
           :key="item.href"
           :href="item.href"
           @click="drawer = false"
@@ -65,7 +64,7 @@
       <AboutSection />
       <ServicesSection />
       <RentaConsultorio />
-        <FacilitiesSection /> 
+      <FacilitiesSection />
       <TestimonialsSection />
       <ContactSection />
       <FooterSection />
@@ -74,27 +73,27 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import HeroSection from './components/HeroSection.vue'
-import AboutSection from './components/AboutSection.vue'
-import ServicesSection from './components/ServicesSection.vue'
-import RentaConsultorio from './components/RentaConsultorio.vue'
-import TestimonialsSection from './components/TestimonialSection.vue'
-import FacilitiesSection from './components/FacilitiesSection.vue'
-import ContactSection from './components/ContactSection.vue'
-import FooterSection from './components/FooterSection.vue'
+import { ref } from "vue";
+import HeroSection from "./components/HeroSection.vue";
+import AboutSection from "./components/AboutSection.vue";
+import ServicesSection from "./components/ServicesSection.vue";
+import RentaConsultorio from "./components/RentaConsultorio.vue";
+import TestimonialsSection from "./components/TestimonialSection.vue";
+import FacilitiesSection from "./components/FacilitiesSection.vue";
+import ContactSection from "./components/ContactSection.vue";
+import FooterSection from "./components/FooterSection.vue";
 
-const drawer = ref(false)
+const drawer = ref(false);
 
 const menuItems = [
-  { title: 'Inicio', href: '#inicio' },
-  { title: 'Sobre Mí', href: '#sobre-mi' },
-  { title: 'Servicios', href: '#servicios' },
-  { title: 'Renta de Consultorios', href: '#renta-consultorios' },
-  { title: 'Instalaciones', href: '#instalaciones' },
-  { title: 'Testimonios', href: '#testimonios' },
-  { title: 'Contacto', href: '#contacto' }
-]
+  { title: "Inicio", href: "#inicio" },
+  { title: "Sobre Mí", href: "#sobre-mi" },
+  { title: "Servicios", href: "#servicios" },
+  { title: "Renta de Consultorios", href: "#renta-consultorios" },
+  { title: "Instalaciones", href: "#instalaciones" },
+  { title: "Testimonios", href: "#testimonios" },
+  { title: "Contacto", href: "#contacto" },
+];
 </script>
 
 <style scoped>
@@ -135,7 +134,7 @@ const menuItems = [
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;

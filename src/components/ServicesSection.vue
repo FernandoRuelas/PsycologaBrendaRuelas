@@ -39,6 +39,10 @@
         </v-col>
       </v-row>
 
+      <v-row justify="center">
+        <span style="color: var(--text-light)">Las sesiones tienen un costo que oscila entre $500 y $1,200 MXN, según el servicio.</span>
+      </v-row>
+
       <div class="cta-box">
         <div class="cta-content">
           <h3>¿No estás seguro de qué servicio necesitas?</h3>
